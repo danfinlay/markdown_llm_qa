@@ -17,7 +17,7 @@ async function main() {
     maxTokens: 2000,
   });
 
-  const vectorStore = await loadAndProcessDocuments("sdk_docs/");
+  const vectorStore = await loadAndProcessDocuments("docs/");
   const chain = ConversationalRetrievalQAChain.fromLLM(
     model,
     vectorStore.asRetriever()

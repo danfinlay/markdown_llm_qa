@@ -17,7 +17,7 @@ export async function loadAndProcessDocuments(directoryPath) {
   const processDocs = async (doc) => {
     const text = doc.pageContent;
     const output = await splitter.createDocuments([text], {
-      metadata: "sdk_docs",
+      metadata: "docs",
     });
 
     sdk_docs.push(...output);
